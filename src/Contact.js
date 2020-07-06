@@ -1,16 +1,16 @@
 import React from "react";
-import  "../public/styles.css"
+import "../public/styles.css";
+import Details from "./Details";
 function Card({ name, img, tel, email }) {
   return (
     <div className="card">
       <div className="top">
-      <h2 className="name">{name}</h2>
-      <img className="circle-img" src={img} alt="" />
+        <h2 className="name">{name}</h2>
+        <img className="circle-img" src={img} alt="" />
       </div>
       <div className="bottom">
-
-      <p className="info">{tel}</p>
-      <p className="info">{email}</p>
+        <p className="info">{tel}</p>
+        <p className="info">{email}</p>
       </div>
     </div>
   );
@@ -21,22 +21,22 @@ const Contact = () => {
     <div>
       <h1 className="heading">Contact </h1>
       <Card
-        name="beyonce"
-        img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-        tel="1234556"
-        email="beyonce@email.com"
+        name={Details[0].name}
+        img={Details[0].img}
+        tel={Details[0].tel}
+        email={Details[0].email}
       />
       <Card
-        name="Jack bauer"
-        img="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
-        tel="63789837"
-        email="beauer@gamil.com"
+        name={Details[1].name}
+        img={Details[1].img}
+        tel={Details[1].tel}
+        email={Details[1].email}
       />
       <Card
-        name="Chuck norries"
-        img="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
-        tel="83745790"
-        email="chuck@email.com"
+        name={Details[2].name}
+        img={Details[2].img}
+        tel={Details[2].tel}
+        email={Details[2].email}
       />
     </div>
   );
