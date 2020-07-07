@@ -2,11 +2,13 @@ import React from "react";
 import "../public/styles.css";
 import Details from "./Details";
 import Avatar from "./Avatar";
+import Name from "./Name"
 function Card({ name, img, tel, email }) {
   return (
+    
     <div className="card">
       <div className="top">
-        <h2 className="name">{name}</h2>
+        <Name name={name}/>
         <Avatar img={img}/>
       </div>
       <div className="bottom">
@@ -20,8 +22,11 @@ function Card({ name, img, tel, email }) {
 const Contact = () => {
   return (
     <div>
-      <h1 className="heading">Contact </h1>
+     
+      
+      
       <Card
+      
         name={Details[0].name}
         img={Details[0].img}
         tel={Details[0].tel}
