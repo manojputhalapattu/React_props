@@ -2,14 +2,14 @@ import React from "react";
 import "../public/styles.css";
 import Details from "./Details";
 import Avatar from "./Avatar";
-import Name from "./Name"
-function Card({ name, img, tel, email }) {
+import Name from "./Name";
+function Card({ name, id,img, tel, email }) {
   return (
-    
     <div className="card">
       <div className="top">
-        <Name name={name}/>
-        <Avatar img={img}/>
+        <Name name={name} />
+        <p> {id}</p>
+        <Avatar img={img} />
       </div>
       <div className="bottom">
         <p className="info">{tel}</p>
@@ -18,21 +18,24 @@ function Card({ name, img, tel, email }) {
     </div>
   );
 }
-function createcard(details){
-  return <Card name={details.name}
-img ={details.img}
-tel={details.tel}
-email={details.email}
-  />
-
+function createcard(details) {
+  return (
+    <Card
+      key={details.id}
+      id={details.id}
+      name={details.name}
+      img={details.img}
+      tel={details.tel}
+      email={details.email}
+    />
+  );
 }
 
 const Contact = () => {
   return (
     <div>
-     {Details.map(Card)}
-      
-      
+      {Details.map(Card)}
+
       {/* <Card
       
         name={Details[0].name}
