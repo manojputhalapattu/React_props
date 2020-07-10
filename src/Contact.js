@@ -18,14 +18,22 @@ function Card({ name, img, tel, email }) {
     </div>
   );
 }
+function createcard(details){
+  return <Card name={details.name}
+img ={details.img}
+tel={details.tel}
+email={details.email}
+  />
+
+}
 
 const Contact = () => {
   return (
     <div>
-     
+     {Details.map(Card)}
       
       
-      <Card
+      {/* <Card
       
         name={Details[0].name}
         img={Details[0].img}
@@ -43,7 +51,7 @@ const Contact = () => {
         img={Details[2].img}
         tel={Details[2].tel}
         email={Details[2].email}
-      />
+      /> */}
     </div>
   );
 };
